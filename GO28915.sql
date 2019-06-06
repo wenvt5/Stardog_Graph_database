@@ -23,7 +23,7 @@ CREATE TABLE Hist (
 	pfspec       	VARCHAR(30),
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
-	PRIMARY KEY (sample_id)
+	PRIMARY KEY (sample_id),
 	FOREIGN KEY (is_primary) REFERENCES Qlab (sample_id)
 );
 
@@ -38,7 +38,7 @@ CREATE TABLE Ea (
 	pfspec       	VARCHAR(30),
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
-	PRIMARY KEY (sample_id)
+	PRIMARY KEY (sample_id),
 	FOREIGN KEY (is_primary) REFERENCES Hist (sample_id)
 );
 
@@ -53,7 +53,7 @@ CREATE TABLE Fmi (
 	pfspec       	VARCHAR(30),
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
-	PRIMARY KEY (sample_id)
+	PRIMARY KEY (sample_id),
 	FOREIGN KEY (is_primary) REFERENCES Hist (sample_id)
 );
  
@@ -82,7 +82,7 @@ CREATE TABLE Precision_rna (
 	pfspec       	VARCHAR(30),
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
-	PRIMARY KEY (sample_id)
+	PRIMARY KEY (sample_id),
 	FOREIGN KEY (is_primary) REFERENCES Precision_pbmc (sample_id)
 );
 
@@ -97,6 +97,6 @@ CREATE TABLE Labc (
 	pfspec       	VARCHAR(30),
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
-	PRIMARY KEY (sample_id)
+	PRIMARY KEY (sample_id),
 	FOREIGN KEY (is_primary) REFERENCES Precision_rna (sample_id)
 );
