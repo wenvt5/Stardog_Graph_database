@@ -10,11 +10,11 @@ insert into Hist values ("GO28915","550054","15891508","SCRN","05850007B","S4405
 insert into Labc values ("GO28915","521895","11948329","Cycle 1 Day 1","SC-839608-A01","GN006071","LABC","RNA","Whole Blood","FALSE");
 insert into Labc values ("GO28915","560201","14091875","Cycle 1 Day 1","SC-839608-A02","GN008849","LABC","RNA","Whole Blood","FALSE");
 
-insert into Precision_pbmc values ("GO28915","521895","11948329","Cycle 1 Day 1","GN006071",,"Precision","PBMC","Whole Blood","TRUE");
-insert into Precision_pbmc values ("GO28915","560201","14091875","Cycle 1 Day 1","GN008849",,"Precision","PBMC","Whole Blood","TRUE");
+insert into Precision_pbmc values ("GO28915","521895","11948329","Cycle 1 Day 1","GN006071","","Precision","PBMC","Whole Blood","TRUE");
+insert into Precision_pbmc values ("GO28915","560201","14091875","Cycle 1 Day 1","GN008849","","Precision","PBMC","Whole Blood","TRUE");
 
 insert into Precision_rna values ("GO28915","521895","11948329","Cycle 1 Day 1","GN006071 0702","GN006071","Precision","RNA","Whole Blood","FALSE");
 insert into Precision_rna values ("GO28915","521895","11948329","Cycle 1 Day 1","GN006071 0702","GN006071","Precision","RNA","Whole Blood","FALSE");
 
-insert into Qlab values ("GO28915","540779","16574316","SCRN","L1630467",,"QLAB","BLOCK SLIDE","OTHER; SPECIFY BELOW:ADRENAL GLAND","TRUE");
-insert into Qlab values ("GO28915","598427","13901966","SCRN","EB593671",,"QLAB","BLOCK SLIDE","LUNG","TRUE");
+insert into Qlab values ("GO28915","540779","16574316","SCRN","L1630467","","QLAB","BLOCK SLIDE","OTHER; SPECIFY BELOW:ADRENAL GLAND","TRUE");
+insert into Qlab values ("GO28915","598427","13901966","SCRN","EB593671","","QLAB","BLOCK SLIDE","LUNG","TRUE");
