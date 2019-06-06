@@ -24,7 +24,7 @@ CREATE TABLE Hist (
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
-	FOREIGN KEY (is_primary) REFERENCES Qlab (sample_id)
+	FOREIGN KEY (derived_from) REFERENCES Qlab (sample_id)
 );
 
 CREATE TABLE Ea (
@@ -39,7 +39,7 @@ CREATE TABLE Ea (
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
-	FOREIGN KEY (is_primary) REFERENCES Hist (sample_id)
+	FOREIGN KEY (derived_from) REFERENCES Hist (sample_id)
 );
 
 CREATE TABLE Fmi (
@@ -54,7 +54,7 @@ CREATE TABLE Fmi (
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
-	FOREIGN KEY (is_primary) REFERENCES Hist (sample_id)
+	FOREIGN KEY (derived_from) REFERENCES Hist (sample_id)
 );
  
 CREATE TABLE Precision_pbmc (
@@ -83,7 +83,7 @@ CREATE TABLE Precision_rna (
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
-	FOREIGN KEY (is_primary) REFERENCES Precision_pbmc (sample_id)
+	FOREIGN KEY (derived_from) REFERENCES Precision_pbmc (sample_id)
 );
 
 CREATE TABLE Labc (
@@ -98,5 +98,5 @@ CREATE TABLE Labc (
 	bmfloc       	VARCHAR(30),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
-	FOREIGN KEY (is_primary) REFERENCES Precision_rna (sample_id)
+	FOREIGN KEY (derived_from) REFERENCES Precision_rna (sample_id)
 );
