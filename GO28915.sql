@@ -7,7 +7,7 @@ CREATE TABLE Qlab (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id)
 );
@@ -21,7 +21,7 @@ CREATE TABLE Hist (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
 	FOREIGN KEY (derived_from) REFERENCES Qlab (sample_id)
@@ -36,7 +36,7 @@ CREATE TABLE Ea (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
 	FOREIGN KEY (derived_from) REFERENCES Hist (sample_id)
@@ -51,7 +51,7 @@ CREATE TABLE Fmi (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
 	FOREIGN KEY (derived_from) REFERENCES Hist (sample_id)
@@ -66,7 +66,7 @@ CREATE TABLE Precision_pbmc (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id)
 );
@@ -80,7 +80,7 @@ CREATE TABLE Precision_rna (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
 	FOREIGN KEY (derived_from) REFERENCES Precision_pbmc (sample_id)
@@ -95,7 +95,7 @@ CREATE TABLE Labc (
 	derived_from	VARCHAR(30),
   	bmfnam       	VARCHAR(30),
 	pfspec       	VARCHAR(30),
-	bmfloc       	VARCHAR(30),
+	bmfloc       	VARCHAR(200),
 	is_primary	VARCHAR(10),
 	PRIMARY KEY (sample_id),
 	FOREIGN KEY (derived_from) REFERENCES Precision_rna (sample_id)
