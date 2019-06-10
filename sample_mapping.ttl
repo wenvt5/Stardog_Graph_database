@@ -1,0 +1,19 @@
+@prefix : <http://identifiers.roche.com/sample_mapping/> .
+@prefix study: <http://identifiers.roche.com/study/> .
+@prefix patient: <http://identifiers.roche.com/patient/> .
+@prefix terms: <http://identifiers.roche.com/terms#> .
+
+study:{STUDYID} a terms:Study ;
+    terms:studyID "{STUDYID}" ;
+    terms:hasPatient :{SCRNUM} .
+
+patient:{SCRNUM} a terms:Patient ;
+    terms:hasVisit :{VISIT} .
+
+:{VISIT} a terms:Visit ;
+    terms:visitName "{VISIT}" ;
+    terms:hasSample :{SAMPLE_ID} .
+
+:{SAMPLE_ID} a terms:Sample ;
+    terms:BMFNUM "{BMFNAM}" ;
+    terms:wasDerivedFrom :{DERIVED_FROM} .
